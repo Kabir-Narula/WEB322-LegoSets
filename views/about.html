@@ -1,0 +1,108 @@
+<!--/********************************************************************************
+* BTI325 – Assignment 03
+*
+* I declare that this assignment is my own work in accordance with Seneca's
+* Academic Integrity Policy:
+*
+* https://www.senecacollege.ca/about/policies/academic-integrity-policy.html
+*
+* Name: Kabir Narula____ Student ID: 127962223____ Date: _15 October 2023__
+*
+********************************************************************************/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lego Collection</title>
+  <link rel="stylesheet" href="/css/main.css" />
+
+</head>
+
+<body tabindex="-1">
+  <div class="navbar bg-base-100">
+    <div class="flex-1">
+      <a class="btn btn-ghost normal-case text-xl" href="/">Lego Collection</a>
+    </div>
+
+    <div class="dropdown">
+      <label tabindex="0" class="btn btn-ghost sm:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </label>
+      <ul tabindex="0" class="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a class="active" href="/about">About</a></li>
+        <li>
+          <details>
+            <summary>
+              Theme
+            </summary>
+            <ul class="p-2 bg-base-100">
+              <li><a href="/lego/sets?theme=Star Wars">Star Wars</a></li>
+              <li><a href="/lego/sets?theme=Promotional">Yorkshire Terrier</a></li>
+              <li><a href="/lego/sets?theme=Pick A Model">Christmas Tree</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+
+    <div class="navbar-center hidden sm:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a class="active" href="/about">About</a></li>
+        <li>
+          <details>
+            <summary>Theme</summary>
+            <ul class="p-2 bg-base-100">
+              <li><a href="/lego/sets?theme=Star Wars">Star Wars</a></li>
+              <li><a href="/lego/sets?theme=Promotional">Yorkshire Terrier</a></li>
+              <li><a href="/lego/sets?theme=Pick A Model">Christmas Tree</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="container mx-auto">
+
+    <div class="hero bg-base-200 rounded-lg p-6">
+      <div class="hero-content text-center ">
+        <div class="max-w-md">
+          <h1 class="text-5xl font-bold">About</h1>
+
+          <p class="py-6">Everything you want to know about me - the designer &amp; developer.</p>
+
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <img class="w-full rounded-lg"
+          src="/image/da.jpg"
+          alt="profile" />
+
+      </div>
+      <div class="prose">
+
+        <p>
+          "I am Levi Ackerman, a symbol of unwavering determination and unmatched prowess, echoing the relentless spirit of humanity within the gripping saga of 'Attack on Titan'."</p>
+
+        <p>Levi Ackerman, a character etched into the annals of anime history, is the epitome of unwavering determination and unparalleled skill in the gripping world of "Attack on Titan." In the dystopian universe where humanity is on the brink of extinction due to colossal humanoid creatures known as Titans, Levi emerges as a beacon of hope and a symbol of resilience. His prowess in combat is legendary, unmatched by any other soldier within the walls. With lightning-fast reflexes and an unyielding resolve, Levi fearlessly confronts Titans, demonstrating a finesse that borders on the supernatural. Beneath his stoic facade lies a profound sense of responsibility, not just for his own survival, but for the safety of his fellow soldiers and the remnants of humanity. Levi's leadership is magnetic; his decisions are calculated and precise.</p>
+
+      </div>
+
+    </div>
+
+  </div>
+</body>
+
+</html>

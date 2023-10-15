@@ -1,0 +1,141 @@
+<!--/********************************************************************************
+* BTI325 – Assignment 03
+*
+* I declare that this assignment is my own work in accordance with Seneca's
+* Academic Integrity Policy:
+*
+* https://www.senecacollege.ca/about/policies/academic-integrity-policy.html
+*
+* Name: Kabir Narula____ Student ID: 127962223____ Date: _15 October 2023__
+*
+********************************************************************************/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lego Collection</title>
+  <link rel="stylesheet" href="/css/main.css" />
+
+</head>
+
+<body tabindex="-1">
+  <div class="navbar bg-base-100">
+    <div class="flex-1">
+      <a class="btn btn-ghost normal-case text-xl" href="/">Lego Collection</a>
+    </div>
+
+    <div class="dropdown">
+      <label tabindex="0" class="btn btn-ghost sm:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </label>
+      <ul tabindex="0" class="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="/about">About</a></li>
+        <li>
+          <details>
+            <summary>
+              Theme
+            </summary>
+            <ul class="p-2 bg-base-100">
+              <li><a href="/lego/sets?theme=Star Wars">Star Wars</a></li>
+              <li><a href="/lego/sets?theme=Promotional">Yorkshire Terrier</a></li>
+              <li><a href="/lego/sets?theme=Pick A Model">Christmas Tree</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+
+    <div class="navbar-center hidden sm:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="/about">About</a></li>
+        <li>
+          <details>
+            <summary>Theme</summary>
+            <ul class="p-2 bg-base-100 right-0">
+              <li><a href="/lego/sets?theme=Star Wars">Star Wars</a></li>
+              <li><a href="/lego/sets?theme=Promotional">Yorkshire Terrier</a></li>
+              <li><a href="/lego/sets?theme=Pick A Model">Christmas Tree</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="container mx-auto">
+
+
+    <div class="hero bg-base-200 rounded-lg p-6">
+      <div class="hero-content text-center ">
+        <div class="max-w-md">
+          <h1 class="text-5xl font-bold">Welcome</h1>
+
+          <p class="py-6">Unleash your inner builder and embark on a fascinating journey through the colorful realm of Lego.</p>
+      
+          <a href="/lego/sets" class="btn btn-primary">Get Started Now</a>
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div>
+
+        <div class="card bg-base-100 shadow-xl">
+          <figure>
+            <img id ="third" class="w-full" src="https://assets.nintendo.com/image/upload/f_auto/q_auto/dpr_2.0/c_scale,w_400/ncom/software/switch/70010000068296/30648e0a24cff549fe97f586431b4b927a8e49f3531108ec50fd00a106733b4d" alt="Lego set" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Batman</h2>
+            <p>In LEGO® Batman™ : The Videogame, play as Batman and his sidekick Robin as you build, drive, swing and fight your way through Gotham City.</p>
+            <div class="card-actions justify-end">
+              <a href="/lego/sets/XBOXGAME-1" class="btn btn-primary">View</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div>
+
+        <div class="card bg-base-100 shadow-xl">
+          <figure>
+            <img id = "first" class="w-full" src="https://media.moddb.com/images/mods/1/56/55081/matoroedition_1.2.png" alt="Lego Set" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Bionicle Heroes</h2>
+            <p>BIONICLE Heroes was a 3D video game of the third-person shooter genre, based on Lego's popular BIONICLE franchise.</p>
+            <div class="card-actions justify-end">
+              <a href="/lego/sets/XBOXGAME-2" class="btn btn-primary">View</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div>
+
+        <div class="card bg-base-100 shadow-xl">
+          <figure>
+            <img id ="second" class="w-full" src="https://staticg.sportskeeda.com/editor/2023/03/fd130-16797293210096-1920.jpg?w=840" alt="Lego Set" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Super-Villains</h2>
+            <p>Embark on an all-new DC/LEGO® adventure by becoming the best villain the universe has seen</p>
+            <div class="card-actions justify-end">
+              <a href="/lego/sets/XBOXGAME-3" class="btn btn-primary">View</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
