@@ -22,52 +22,7 @@
 </head>
 
 <body tabindex="-1">
-  <div class="navbar bg-base-100">
-    <div class="flex-1">
-      <a class="btn btn-ghost normal-case text-xl" href="/">Lego Collection</a>
-    </div>
-
-    <div class="dropdown">
-      <label tabindex="0" class="btn btn-ghost sm:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-      </label>
-      <ul tabindex="0" class="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <li><a class="active" href="/about">About</a></li>
-        <li>
-          <details>
-            <summary>
-              Theme
-            </summary>
-            <ul class="p-2 bg-base-100">
-              <li><a href="/lego/sets?theme=Star Wars">Star Wars</a></li>
-              <li><a href="/lego/sets?theme=Promotional">Yorkshire Terrier</a></li>
-              <li><a href="/lego/sets?theme=Pick A Model">Christmas Tree</a></li>
-            </ul>
-          </details>
-        </li>
-      </ul>
-    </div>
-
-    <div class="navbar-center hidden sm:flex">
-      <ul class="menu menu-horizontal px-1">
-        <li><a class="active" href="/about">About</a></li>
-        <li>
-          <details>
-            <summary>Theme</summary>
-            <ul class="p-2 bg-base-100">
-              <li><a href="/lego/sets?theme=Star Wars">Star Wars</a></li>
-              <li><a href="/lego/sets?theme=Promotional">Yorkshire Terrier</a></li>
-              <li><a href="/lego/sets?theme=Pick A Model">Christmas Tree</a></li>
-            </ul>
-          </details>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <br />
+  <%- include('partials/navbar', {page: '/about' }) %>
 
   <div class="container mx-auto">
 
