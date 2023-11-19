@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,61 +6,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lego Collection</title>
   <link rel="stylesheet" href="/css/main.css" />
-  <script>
-    document.addEventListener("DOMContentLoaded", async ()=>{
-
-        let res = await fetch("https://quotable.io/random");
-        let data = await res.json();
-
-        document.getElementById("quote").innerHTML = `"${data.content}"<br />- <em>${data.author}</em>`;
-    });
-  </script>
-   <style>
+  <style>
     .w-300 {
-  width: 600px;
-  height: 470px;
-}
+      width: 600px;
+      height: 470px;
+    }
 
     .colored-text {
-      color: beige; /* Replace #ff0000 with the color code you desire */
+      color: beige;
+    }
+    .custom-paragraph {
+      margin-top: 10px; 
+      margin-bottom: 10px; 
     }
   </style>
-
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      let res = await fetch("https://quotable.io/random");
+      let data = await res.json();
+      document.getElementById("quote").innerHTML = `"${data.content}"<br />- <em>${data.author}</em>`;
+    });
+  </script>
 </head>
 
 <body tabindex="-1">
 
   <div class="navbar bg-base-100">
-  <div class="flex-1">
-    <a class="btn btn-ghost normal-case text-xl" href="/">Lego Collection</a>
+    <div class="flex-1">
+      <a class="btn btn-ghost normal-case text-xl" href="/">Lego Collection</a>
+    </div>
+
+    <div class="dropdown">
+      <label tabindex="0" class="btn btn-ghost sm:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="roaund" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </label>
+      <ul tabindex="0" class="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a class="" href="/lego/sets">View Collection</a></li>
+        <li><a class="" href="/about">About</a></li>
+      </ul>
+    </div>
+
+    <div class="navbar-center hidden sm:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a class="" href="/lego/sets">View Collection</a></li>
+        <li><a class="" href="/about">About</a></li>
+      </ul>
+    </div>
   </div>
 
-  <div class="dropdown">
-    <label tabindex="0" class="btn btn-ghost sm:hidden">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-      </svg>
-    </label>
-    <ul tabindex="0" class="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-      <li><a class="" href="/lego/sets">View Collection</a></li>
-      <li><a class="" href="/about">About</a></li>
-    </ul>
-  </div>
-
-  <div class="navbar-center hidden sm:flex">
-    <ul class="menu menu-horizontal px-1">
-      <li><a class= "" href="/lego/sets">View Collection</a></li>
-      <li><a class= "" href="/about">About</a></li>
-    </ul>
-  </div>
-</div>
-
-<div class="container mx-auto p-4">
-  <div class="hero bg-base-200 rounded-lg p-6">
-    <div class="hero-content text-center">
-      <div class="max-w-md">
-        <h1 class="text-5xl colored-text"> <%= set.name %> </h1>
-        <p class="colored-text">Below, you will find detailed information about the set: <%= set.name %> </p>
+  <div class="container mx-auto p-4">
+    <div class="hero bg-base-200 rounded-lg p-6">
+      <div class="hero-content text-center">
+        <div class="max-w-md">
+          <h1 class="text-5xl colored-text"> <%= set.name %> </h1>
+          <p class="colored-text custom-paragraph">Detailed information about the set: <%= set.name %> </p>
+        </div>
       </div>
     </div>
   </div>
@@ -71,28 +72,23 @@
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     <div class="w-300">
       <img class="w-300 rounded-lg" src="<%= set.img_url %>" alt="Set Image" />
-
-
     </div>
 
     <div class="prose">
       <p class="colored-text">
         <span class="colored-text">Set Name:</span> <%= set.name %><br />
         <span class="colored-text">Year Released: </span> <%= set.year %> <br />
-        <span class="colored-text">Theme: </span> <%= set.theme %> <br />
+        <span class="colored-text">Theme: </span> <%= set.Theme.name %> <br />
         <span class="colored-text">Number of Parts: </span> <%= set.num_parts %> <br /><br />
         <span id="quote"></span>
         <br /><br />
-        <a class="btn btn-primary btn-sm" href="#" onclick="history.back(); return false;">RETURN</a>
+        <div>
+          <a class="btn btn-primary" href="/lego/editSet/<%= set.set_num %>">Edit</a>
+          <a class="btn btn-primary" href="#" onclick="history.back(); return false;">Return</a>
+        </div>
       </p>
     </div>
   </div>
-</div>
 </body>
 
-
-
 </html>
-
-
-

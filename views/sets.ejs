@@ -63,52 +63,51 @@
     <div class="overflow-x-auto overflow-y-hidden">
       <table class="table table-zebra">
         <!-- head -->
-
+  
         <!-- row 1 -->
-        <% sets.forEach(set=>{ %>
-          <tr class="colored-text"> <!-- Added colored-text class here -->
-
+        <% sets.forEach(set => { %>
+          <tr class="colored-text">
             <td colspan="2">
               <div class="flex items-center space-x-3">
                 <div class="avatar">
                   <div class="w-32 h-32">
-                    <img class="mask mask-squircle w-44 h-44" src="<%=set.img_url%>" alt="Lego-img" />
+                    <img class="mask mask-squircle w-44 h-44" src="<%= set.img_url %>" alt="Lego-img" />
                   </div>
                 </div>
               </div>
             </td>
             <td>
-                <div class="px-14" >
-                  <p>
+              <div class="px-14">
+                <p>
+                  <span class="py-6">
+                    <%= set.name %>
+                  </span> |
+                  <a href="/lego/sets?theme=<%= set.Theme.name %>">
                     <span class="py-6">
-                      <%= set.name %>
-                    </span> |
-                    <a href="/lego/sets?theme=<%= set.theme %>"><span class="py-6">
-                        <%= set.theme %>
-                      </span></a>
-                  </p>
-                </div>
-              </td>
-              
-
+                      <%= set.Theme.name %>
+                    </span>
+                  </a>
+                </p>
+              </div>
+            </td>
             <td class="px-8">
               <span><b>Year: </b>
                 <%= set.year %> - <b>Parts: </b>
-                  <%= set.num_parts %>
+                <%= set.num_parts %>
               </span>
             </td>
             <th>
-              <a href="/lego/sets/<%= set.set_num %>"><button <a href="/lego/sets/<%= set.set_num %>"
-                  class="btn btn-primary btn-xs colored-text"> <!-- Added colored-text class here -->
+              <a href="/lego/sets/<%= set.set_num %>">
+                <button class="btn btn-primary btn-xs colored-text">
                   details
-                </button></a>
+                </button>
+              </a>
             </th>
           </tr>
-          <% }) %>
-            </tbody>
+        <% }) %>
+        </tbody>
       </table>
     </div>
-  </div>
-</body>
-
-</html>
+  </body>
+  
+  </html>

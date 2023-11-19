@@ -21,43 +21,55 @@
 
 </head>
 
+<style>
+  p {
+    color: rgba(255, 255, 255, 0.662);
+  }
+</style>
+
 <body tabindex="-1">
   <%- include('partials/navbar', {page: '/about' }) %>
 
-  <div class="container mx-auto">
+    <div class="container mx-auto">
 
-    <div class="hero bg-base-200 rounded-lg p-6">
-      <div class="hero-content text-center ">
-        <div class="max-w-md">
-          <h1 class="text-5xl font-bold">About</h1>
+      <div class="hero bg-base-200 rounded-lg p-6">
+        <div class="hero-content text-center ">
+          <div class="max-w-md">
+            <h1 class="text-5xl font-bold">About</h1>
 
-          <p class="py-6">Everything you want to know about me - the designer &amp; developer.</p>
+            <p class="py-6">Everything you want to know about me - the designer &amp; developer.</p>
 
+          </div>
         </div>
       </div>
-    </div>
 
-    <br />
+      <br />
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div>
-        <img class="w-full rounded-lg"
-          src="/image/da.jpg"
-          alt="profile" />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <img class="w-full rounded-lg" style="border-radius: 0%;"
+            src="https://i.pinimg.com/originals/c8/34/ec/c834ec8ebdcb5b0e6217cbd7c57a7f15.gif" alt="profile" />
+
+        </div>
+        <div class="prose text-white p-4 md:p-0">
+
+          <p>
+            Satoru Gojo, reputed as The Strongest, is a major character in the manga miniseries Jujutsu Kaisen 0
+            (originally titled Tokyo Metropolitan Curse Technical School) and its 2021 anime film adaptation of the same
+            name, as well as the sequel anime/manga series Jujutsu Kaisen.
+
+            He is the strongest Jujutsu Sorcerer in the world, even rivalling and surpassing the King of Curses Sukuna
+            himself. Like most sorcerers, Satoru strived to protect the world from the Cursed Spirits that plagued it.
+            However, Gojo saw the structure of Jujutsu Sorcerer society as flawed, and as such hoped to change it for
+            the better. To this end, he became a teacher at Jujutsu High, a school dedicated to the cultivation of new
+            generations of Jujutsu Sorcerers.
+            In the anime series, he is voiced by Yuichi Nakamura in the Japanese version of the anime adaptation and by Kaiji Tang in the English version. Nakamura's other heroic roles include Reinhard van Astrea in Re:Zero − Starting Life in Another World, Hawks in My Hero Academia, Gray Fullbuster in Fairy Tail</p>
+
+        </div>
 
       </div>
-      <div class="prose">
-
-        <p>
-          "I am Levi Ackerman, a symbol of unwavering determination and unmatched prowess, echoing the relentless spirit of humanity within the gripping saga of 'Attack on Titan'."</p>
-
-        <p>Levi Ackerman, a character etched into the annals of anime history, is the epitome of unwavering determination and unparalleled skill in the gripping world of "Attack on Titan." In the dystopian universe where humanity is on the brink of extinction due to colossal humanoid creatures known as Titans, Levi emerges as a beacon of hope and a symbol of resilience. His prowess in combat is legendary, unmatched by any other soldier within the walls. With lightning-fast reflexes and an unyielding resolve, Levi fearlessly confronts Titans, demonstrating a finesse that borders on the supernatural. Beneath his stoic facade lies a profound sense of responsibility, not just for his own survival, but for the safety of his fellow soldiers and the remnants of humanity. Levi's leadership is magnetic; his decisions are calculated and precise.</p>
-
-      </div>
 
     </div>
-
-  </div>
 </body>
 
 </html>

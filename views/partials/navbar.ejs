@@ -1,4 +1,4 @@
- <div class="navbar bg-base-100">
+<div class="navbar bg-base-100">
   <div class="flex-1">
     <a class="btn btn-ghost normal-case text-xl" href="/">Lego Collection</a>
   </div>
@@ -11,13 +11,15 @@
     </label>
     <ul tabindex="0" class="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
       <li><a class="<%= (page == "/lego/sets") ? 'active' : '' %>" href="/lego/sets">View Collection</a></li>
+      <li><a class="<%= (page == "/lego/addSet") ? 'active' : '' %>" href="/lego/addSet">Add To Collection</a></li>
       <li><a class="<%= (page == "/about") ? 'active' : '' %>" href="/about">About</a></li>
     </ul>
   </div>
 
   <div class="navbar-center hidden sm:flex">
     <ul class="menu menu-horizontal px-1">
-      <li><a class="<%= (page == "/lego/sets") ? 'active' : '' %>" href="/lego/sets">View Collection</a></li>
+      <li><a class="<%= (page == "/lego/sets" || page == "/about" || page == "/lego/addSet") ? 'active' : '' %>" href="/lego/sets">View Collection</a></li>
+      <li><a class="<%= (page == "/lego/addSet") ? 'active' : '' %>" href="/lego/addSet">Add To Collection</a></li>
       <li><a class="<%= (page == "/about") ? 'active' : '' %>" href="/about">About</a></li>
     </ul>
   </div>
