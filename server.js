@@ -66,7 +66,6 @@ app.post('/lego/addSet', async (req, res) => {
 });
 
 
-// Add these routes in server.js
 
 // Render the editSet form
 app.get("/lego/editSet/:set_num", async (req, res) => {
@@ -105,7 +104,14 @@ app.use((req, res) => res.status(404).render("404", { message: "Page not found" 
 // Custom error handling middleware for internal server errors
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).render("500", { message: "Internal Server Error" });
+
+  if (err.status === 404) {
+    // Render the 404 view
+    res.status(404).render("404", { message: "Page not found" });
+  } else {
+    // Render the 500 view for other errors
+    res.status(500).render("500", { message: "Internal Server Error" });
+  }
 });
 
 async function startServer() {
