@@ -1,3 +1,18 @@
+/********************************************************************************
+* WEB322 – Assignment 05
+* 
+* I declare that this assignment is my own work in accordance with Seneca's
+* Academic Integrity Policy:
+* 
+* https://www.senecacollege.ca/about/policies/academic-integrity-policy.html
+* 
+* Name: Kabir Narula Student ID: 127962223 Date: November 15, 2023
+*
+* Published URL: https://sleepy-hare-suspenders.cyclic.app
+*
+********************************************************************************/
+
+
 const express = require("express");
 const app = express();
 const port = 3000;
@@ -61,7 +76,7 @@ app.post('/lego/addSet', async (req, res) => {
     await legoData.addSet(req.body);
     res.redirect('/lego/sets');
   } catch (err) {
-    res.status(500).render('500', { message: `I'm sorry, but we have encountered the following error: ${err.errors[0].message}` });
+    res.status(500).render('500', { message: `I'm sorry, but we have encountered the following error: ${err.message}` });
   }
 });
 
