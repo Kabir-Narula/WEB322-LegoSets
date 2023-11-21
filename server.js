@@ -65,7 +65,7 @@ app.get("/lego/addSet", async (req, res) => {
     const themes = await legoData.getAllThemes();
     res.render("addSet", { themes });
   } catch (err) {
-    res.status(500).render("500", { message: `Error: ${err.message}` });
+    res.render("500", { message: `Error: ${err.message}` });
   }
 });
 
@@ -76,7 +76,7 @@ app.post('/lego/addSet', async (req, res) => {
     await legoData.addSet(req.body);
     res.redirect('/lego/sets');
   } catch (err) {
-    res.status(500).render('500', { message: `I'm sorry, but we have encountered the following error: ${err.message}` });
+    res.render("500", { message: `I'm sorry, but we have encountered the following error: ${err.message}` });
   }
 });
 
