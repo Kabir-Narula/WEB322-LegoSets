@@ -118,8 +118,8 @@ const addSet = async (setData) => {
   try {
     await Set.create(setData);
   } catch (err) {
-    throw new Error(err);
-    //throw err.errors[0].message;
+   // throw new Error(err);
+    throw err.errors[0].message;
   }
 };
 

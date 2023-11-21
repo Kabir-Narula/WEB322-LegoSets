@@ -76,7 +76,7 @@ app.post('/lego/addSet', async (req, res) => {
     await legoData.addSet(req.body);
     res.redirect('/lego/sets');
   } catch (err) {
-    res.render("500", { message: `I'm sorry, but we have encountered the following error: ${err.message}` });
+    res.render("500", { message: `I'm sorry, but we have encountered the following error: ${err}` });
   }
 });
 
