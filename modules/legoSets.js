@@ -6,7 +6,7 @@
  *
  *  https://www.senecacollege.ca/about/policies/academic-integrity-policy.html
  *
- *  Name: Kabir Narula Student ID: 127962223 Date: 25 September 2023
+ *  
  *
  ********************************************************************************/
 
