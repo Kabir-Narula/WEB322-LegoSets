@@ -16,7 +16,7 @@ const clientSessions = require("client-sessions");
 const authData = require("./modules/auth-service");
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = Process.env.PORT ||3000;
 const path = require("path");
 const legoData = require("./modules/legoSets");
 
