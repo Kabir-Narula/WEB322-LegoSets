@@ -98,7 +98,7 @@ async function getSetsByTheme(theme) {
     const sets = await Set.findAll({
       include: [Theme],
       where: {
-        '$Theme.name$': {
+        "$Theme.name$": {
           [Sequelize.Op.iLike]: `%${theme}%`,
         },
       },
@@ -116,9 +116,10 @@ async function getSetsByTheme(theme) {
 }
 const addSet = async (setData) => {
   try {
+    console.log(setData);
     await Set.create(setData);
   } catch (err) {
-   // throw new Error(err);
+    // throw new Error(err);
     throw err.errors[0].message;
   }
 };
@@ -148,4 +149,13 @@ const deleteSet = async (setNum) => {
   }
 };
 
-module.exports = { initialize, getAllSets, getSetByNum, getSetsByTheme, addSet, getAllThemes, editSet, deleteSet };
+module.exports = {
+  initialize,
+  getAllSets,
+  getSetByNum,
+  getSetsByTheme,
+  addSet,
+  getAllThemes,
+  editSet,
+  deleteSet,
+};

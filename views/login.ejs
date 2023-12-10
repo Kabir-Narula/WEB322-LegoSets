@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html data-theme="light" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lego Collection</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- Include daisy CSS framework here -->
+    <link rel="stylesheet" href="/css/daisy.css">
+    <style>
+        /* CSS for the button */
+        .button-71 {
+            background-color: rgba(48, 48, 113, 0.66);
+            border: 0;
+            border-radius: 56px;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            outline: 0;
+            padding: 16px 21px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            transition: all .3s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button-71:before {
+            background-color: initial;
+            background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+            border-radius: 125px;
+            content: "";
+            height: 50%;
+            left: 4%;
+            opacity: .5;
+            position: absolute;
+            top: 0;
+            transition: all .3s;
+            width: 92%;
+        }
+
+        .button-71:hover {
+            box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+            transform: scale(1.05);
+        }
+
+        @media (min-width: 768px) {
+            .button-71 {
+                padding: 16px 48px;
+            }
+        }
+
+        /* Custom CSS for label */
+        .custom-label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+            color: beige; /* Set label text color to blue */
+        }
+
+        /* Custom CSS for input fields */
+        .custom-input {
+            padding: 10px;
+            border: 1px solid beige;
+            border-radius: 4px;
+            width: 100%;
+            margin-bottom: 1rem;
+            font-size: 16px;
+        }
+        .input{
+            background-color: transparent;
+            color: white;
+        }
+        
+    </style>
+</head>
+
+<body tabindex="-1">
+<!-- Navbar -->
+<%- include('partials/navbar', {page:'/login'}) %>
+
+<div class="container mx-auto p-4">
+    <div class="hero bg-base-200 rounded-lg p-6">
+        <div class="hero-content text-center">
+            <div class="max-w-md">
+                <h1 class="text-5xl font-bold">Log In</h1>
+                <p class="py-6">Please provide your credentials below.</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <form method="POST" action="/login" class="space-y-4">
+        <div class="form-control">
+            <label for="userName" class="label custom-label">User Name</label>
+            <input id="userName" name="userName" type="text" placeholder="User Name" required
+                   class="input input-bordered custom-input">
+        </div>
+
+        <div class="form-control">
+            <label for="password" class="label custom-label">Password</label>
+            <input id="password" name="password" type="password" placeholder="Password" required
+                   class="input input-bordered custom-input">
+        </div>
+        <div>
+        <input type="submit" class="button-71" value="Login">
+    </div>
+    </form>
+
+    <% if (errorMessage) { %>
+    <div class="alert alert-error">
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none"
+             viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span>
+            <%= errorMessage %>
+        </span>
+    </div>
+    <% } %>
+</div>
+</body>
+</html>

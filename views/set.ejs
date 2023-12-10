@@ -71,24 +71,28 @@
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     <div class="w-300">
-      <img class="w-300 rounded-lg" src="<%= set.img_url %>" alt="Set Image" />
+        <img class="w-300 rounded-lg" src="<%= set.img_url %>" alt="Set Image" />
     </div>
 
     <div class="prose">
-      <p class="colored-text">
-        <span class="colored-text">Set Name:</span> <%= set.name %><br />
-        <span class="colored-text">Year Released: </span> <%= set.year %> <br />
-        <span class="colored-text">Theme: </span> <%= set.Theme.name %> <br />
-        <span class="colored-text">Number of Parts: </span> <%= set.num_parts %> <br /><br />
-        <span id="quote"></span>
-        <br /><br />
-        <div>
-          <a class="btn btn-primary" href="/lego/editSet/<%= set.set_num %>">Edit</a>
-          <a class="btn btn-primary" href="#" onclick="history.back(); return false;">Return</a>
-        </div>
-      </p>
+        <p class="colored-text">
+            <span class="colored-text">Set Name:</span> <%= set.name %><br />
+            <span class="colored-text">Year Released: </span> <%= set.year %> <br />
+            <span class="colored-text">Theme: </span> <%= set.Theme.name %> <br />
+            <span class="colored-text">Number of Parts: </span> <%= set.num_parts %> <br /><br />
+            <span id="quote"></span>
+            <br /><br />
+            <!-- Add the condition to show the "Edit" button only if there is an active session -->
+            <% if (session.user) { %>
+                <div>
+                    <a class="btn btn-primary" href="/lego/editSet/<%= set.set_num %>">Edit</a>
+                    <a class="btn btn-primary" href="#" onclick="history.back(); return false;">Return</a>
+                </div>
+            <% } %>
+        </p>
     </div>
-  </div>
+</div>
 </body>
+
 
 </html>

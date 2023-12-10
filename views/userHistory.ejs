@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html data-theme="light" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User History</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- Include daisy CSS framework here -->
+    <link rel="stylesheet" href="/css/daisy.css">
+    <style>
+        /* CSS for the button */
+        .button-71 {
+            background-color: rgba(48, 48, 113, 0.66);
+            border: 0;
+            border-radius: 56px;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            outline: 0;
+            padding: 16px 21px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            transition: all .3s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button-71:before {
+            background-color: initial;
+            background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+            border-radius: 125px;
+            content: "";
+            height: 50%;
+            left: 4%;
+            opacity: .5;
+            position: absolute;
+            top: 0;
+            transition: all .3s;
+            width: 92%;
+        }
+
+        .button-71:hover {
+            box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+            transform: scale(1.05);
+        }
+
+        @media (min-width: 768px) {
+            .button-71 {
+                padding: 16px 48px;
+            }
+        }
+
+        /* Custom CSS for table */
+        .user-history-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .user-history-table th,
+        .user-history-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .user-history-table th {
+            background-color: #f2f2f2;
+        }
+
+    </style>
+</head>
+
+<body tabindex="-1">
+    <!-- Navbar -->
+    <%- include('partials/navbar', {page:'/userHistory'}) %>
+
+    <div class="container mx-auto p-4">
+        <div class="hero bg-base-200 rounded-lg p-6">
+            <div class="hero-content text-center">
+                <div class="max-w-md">
+                    <h1 class="text-5xl font-bold">User History</h1>
+                    <% if (session.user) { %>
+                    <p>Username: <%= session.user.userName %></p>
+                    <p>Email: <%= session.user.email %></p>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+
+        <% if (session.user && session.user.loginHistory) { %>
+        <table class="user-history-table">
+            <thead>
+                <tr>
+                    <th>Login Date/Time</th>
+                    <th>Client Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% session.user.loginHistory.forEach(function(history) { %>
+                <tr>
+                    <td><%= history.dateTime %></td>
+                    <td><%= history.userAgent %></td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <% } else { %>
+        <p>No login history available.</p>
+        <% } %>
+    </div>
+</body>
+
+</html>

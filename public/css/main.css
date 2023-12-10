@@ -59,10 +59,18 @@ html {
 
 body {
   margin: 0;
-  /* 1 */
   line-height: inherit;
-  background-image: url(aaa.jpg);
-  /* 2 */
+  background-image: url('aaa.jpg'); /* Replace 'aaa.jpg' with your actual image path */
+  background-size: cover;
+  
+  
+  justify-content: center;
+ 
+  min-height: 100vh;
+}
+
+.okay{
+  background-color: transparent;
 }
 
 /*
