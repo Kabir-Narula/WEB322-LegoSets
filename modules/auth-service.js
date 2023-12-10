@@ -62,7 +62,10 @@ module.exports.checkUser = async (userData) => {
     }
 
     // Compare the user's entered password with the hashed password in the database
-    const passwordMatch = await bcrypt.compare(userData.password, user.password);
+    const passwordMatch = await bcrypt.compare(
+      userData.password,
+      user.password
+    );
 
     if (!passwordMatch) {
       throw new Error("Incorrect Password for user: " + userData.userName);

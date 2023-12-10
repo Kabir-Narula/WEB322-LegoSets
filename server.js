@@ -1,5 +1,5 @@
 /********************************************************************************
-* WEB322 – Assignment 05
+* WEB322 – Assignment 06
 * 
 * I declare that this assignment is my own work in accordance with Seneca's
 * Academic Integrity Policy:
@@ -10,7 +10,7 @@
 *
 * Published URL: https://sleepy-hare-suspenders.cyclic.app
 *
-********************************************************************************/
+************************************** https://sleepy-hare-suspenders.cyclic.app******************************************/
 
 const clientSessions = require("client-sessions");
 const authData = require("./modules/auth-service");

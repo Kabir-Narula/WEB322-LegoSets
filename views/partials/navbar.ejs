@@ -42,6 +42,15 @@
               class="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
               <li><a class="<%= (page == "/lego/sets") ? 'active' : '' %>" href="/lego/sets">View Collection</a></li>
               <li><a class="<%= (page == "/about") ? 'active' : '' %>" href="/about">About</a></li>
+              <li>
+                <details>
+                  <summary>Account</summary>
+                  <ul class=" okay p-2 right-0">
+                    <li><a class="<%= (page == "/login") ? 'active' : '' %>" href="/login">Login</a></li>
+                    <li><a class="<%= (page == "/register") ? 'active' : '' %>" href="/register">Register</a></li>
+                  </ul>
+                </details>
+              </li>
             </ul>
           </div>
           <!-- Responsive navbar -->
