@@ -1,8 +1,10 @@
+
+
 # Lego Collection Web App
 
 ## Project Overview
 
-The Lego Collection Web App is a dynamic web application built using Node.js, Express.js, HTML, CSS, Tailwind CSS, and Sequelize with PostgreSQL. It allows users to explore, manage, and interact with a collection of Lego sets. The application now includes database integration for better data management, creation, modification, and deletion of Lego sets.
+The Lego Collection Web App is a dynamic web application built using Node.js, Express.js, HTML, CSS, Tailwind CSS, Sequelize with PostgreSQL, and user authentication functionalities. It allows users to explore, manage, and interact with a collection of Lego sets. The application now includes robust user authentication, allowing users to create accounts, log in, and manage their Lego collections securely.
 
 ## Key Features and Contributions
 
@@ -11,19 +13,12 @@ The Lego Collection Web App is a dynamic web application built using Node.js, Ex
 - Ensured responsive design elements for a seamless user experience across various devices.
 
 ### 2. Custom HTML Pages
-- Developed custom HTML pages for different views:
-  - **`home.html`**:
-    - Responsive navbar with links to the landing page, about page, and theme dropdown.
-    - Hero section encouraging users to explore the Lego collection with direct links to individual Lego sets.
-  - **`about.html`**:
-    - Maintained a consistent layout with the home page.
-    - Featured a hero section with information about the creator, including an image and a brief description of hobbies and interests.
-  - **`404.html`**:
-    - Crafted a custom 404 error page with relevant messaging or imagery to guide users back to the main content seamlessly.
+- Developed custom HTML pages for different views, including the home page, about page, and theme-based Lego sets pages.
+- Maintained a consistent layout and user-friendly interface.
 
 ### 3. Dynamic Routes and Data Handling with Sequelize
 - Refactored code to use Sequelize with PostgreSQL for efficient data management.
-- Configured dynamic routes and HTTP status codes in the `server.js` file.
+- Configured dynamic routes and HTTP status codes.
 - Implemented query parameter handling to filter Lego sets based on themes.
 - Utilized Sequelize to handle database operations, enabling the creation, modification, and deletion of Lego sets.
 
@@ -33,19 +28,22 @@ The Lego Collection Web App is a dynamic web application built using Node.js, Ex
 - Configured Sequelize models for `Theme` and `Set` with appropriate column names and data types.
 - Established associations between the `Set` and `Theme` models.
 
-### 5. Adding Existing Sets and Bulk Insert
-- Implemented logic to add existing Lego sets to the database using Sequelize's `bulkCreate` method.
-- Executed bulk insertion of data from a provided code snippet, ensuring a seamless transition of existing data to the new database.
+### 5. User Authentication (New)
+- Implemented user authentication features for secure access to the Lego Collection Web App.
+- Users can now create accounts, log in, and log out for personalized interactions.
+- Added user-specific views and permissions for editing and deleting sets.
+- Ensured secure password storage and user login history tracking.
 
-### 6. Editing and Deleting Sets
-- Enabled users to edit existing Lego sets with a new view (`editSet.ejs`).
-- Provided a form to update set details, populated with data from the database.
-- Implemented functionality to delete existing sets, including UI integration.
+### 6. Adding, Editing, and Deleting Sets
+- Enabled users to add new Lego sets to the collection.
+- Implemented functionality to edit existing Lego sets, including UI integration.
+- Provided users with the ability to delete existing sets.
 
-### 7. Creating New Sets
-- Implemented a new view (`addSet.ejs`) for users to add new Lego sets to the collection.
-- Created a form with validation for set details, including theme selection.
-- Ensured seamless integration with the database to add new sets.
+### 7. User Dashboard (New)
+- Introduced a user dashboard accessible to logged-in users.
+- The dashboard displays a personalized collection of Lego sets associated with the user's account.
+- Users can easily access and manage their sets, including editing and deleting them, or adding new sets to the collection.
+- Implemented permissions to ensure users can only manage their own sets.
 
 ## How to Run the Application
 
