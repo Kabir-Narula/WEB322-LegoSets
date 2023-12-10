@@ -1,14 +1,16 @@
-/******************************************************************************** *  BTI325 – Assignment 06
- *
- *	I declare that this assignment is my own work in accordance with Seneca's *  Academic Integrity Policy:
- *
- *	https://www.senecacollege.ca/about/policies/academic-integrity-policy.html
- *
- *	Name: Kabir Narula Student ID: 127962223 Date: December 10
- *
- *	Published URL: ___________________________________________________________
- *
- ********************************************************************************/
+/********************************************************************************
+* WEB322 – Assignment 05
+* 
+* I declare that this assignment is my own work in accordance with Seneca's
+* Academic Integrity Policy:
+* 
+* https://www.senecacollege.ca/about/policies/academic-integrity-policy.html
+* 
+* Name: Kabir Narula Student ID: 127962223 Date: November 15, 2023
+*
+* Published URL: https://sleepy-hare-suspenders.cyclic.app
+*
+********************************************************************************/
 
 const clientSessions = require("client-sessions");
 const authData = require("./modules/auth-service");
