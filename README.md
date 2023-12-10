@@ -39,12 +39,6 @@ The Lego Collection Web App is a dynamic web application built using Node.js, Ex
 - Implemented functionality to edit existing Lego sets, including UI integration.
 - Provided users with the ability to delete existing sets.
 
-### 7. User Dashboard (New)
-- Introduced a user dashboard accessible to logged-in users.
-- The dashboard displays a personalized collection of Lego sets associated with the user's account.
-- Users can easily access and manage their sets, including editing and deleting them, or adding new sets to the collection.
-- Implemented permissions to ensure users can only manage their own sets.
-
 ## How to Run the Application
 
 To run the Lego Collection Web App locally, follow these steps:
